@@ -1,4 +1,4 @@
-require "../solutions/graph_dfs"
+require "./graph_dfs"
 
 RSpec.describe "is_path" do
   simple_graph = {
