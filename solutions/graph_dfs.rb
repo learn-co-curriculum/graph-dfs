@@ -75,7 +75,7 @@ if __FILE__ == $PROGRAM_NAME
     pirate: [:shiba, :inu],
     shiba: [],
     inu: []
-  };
+  }
 
   puts ""
 
