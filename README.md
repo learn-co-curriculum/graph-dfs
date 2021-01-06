@@ -32,7 +32,7 @@ In this graph, jan can travel to carl via john, but jambaby can't visit anyone a
 
 ## Implement isPath(graph, vertexA, vertexB) / is_path(graph, vertex_a, vertex_b)
 
-Your method will be given a graph stored in a hash/object. Each key represents a vertex in the graph, and each value will be a list of adjacent vertices stored in an array. The method will also be passed two vertices. Your job is to determine whether there is a path between them. If there is, return `true`, otherwise `false`. There is no guarantee that the vertices given will be in the graph.
+Your method will be given a graph stored in a hash/object. Each key represents a vertex in the graph, and each value will be a list of adjacent vertices stored in an array. The method will also be passed two vertices. Your job is to determine whether there is a path between them. If there is, return `true`, otherwise `false`. The vertices given will always be in the graph.
 
 ```
 graph = {
