@@ -18,7 +18,7 @@ if (require.main === module) {
   console.log("");
 
   console.log("Expecting: false");
-  console.log(isPath(graph(graph, "jan", "dave")));
+  console.log(isPath(graph, "jan", "dave"));
 }
 
 module.exports = isPath;

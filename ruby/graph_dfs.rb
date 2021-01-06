@@ -12,12 +12,12 @@ if __FILE__ == $PROGRAM_NAME
   }
   
   puts "Expecting: true"
-  puts is_path(graph, "jan", "carl")
+  puts is_path(graph, :jan, :carl)
 
   puts
 
   puts "Expecting: false"
-  puts is_path(graph, "jan", "dave")
+  puts is_path(graph, :jan, :dave)
 
   # Don't forget to add your own!
 end
