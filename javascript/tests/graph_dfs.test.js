@@ -1,4 +1,4 @@
-const isPath = require("../../solutions/graph_dfs");
+const isPath = require("../graph_dfs");
 
 const simpleGraph = {
   jan: ["john", "jambaby"],
