@@ -47,6 +47,10 @@ RSpec.describe "is_path" do
     expect(is_path(less_simple_graph, :jan, :jan)).to be true
   end
 
+  it "returns false when there is NO path from A to B and A and B are the same vertex" do
+    expect(is_path(simple_graph, :jan, :jan)).to be false
+  end
+
   it "can handle coming across looping paths" do
     expect(is_path(less_simple_graph, :jan, :mittens)).to be false
   end
