@@ -1,11 +1,11 @@
 function isPath(graph, vertexA, vertexB, visited = new Set()) {
-  if (graph[vertexA].includes(vertexB)) {
-    return true;
-  }
-
   visited.add(vertexA);
 
   for (const vertex of graph[vertexA]) {
+    if (vertex === vertexB) {
+      return true;
+    }
+    
     if (!visited.has(vertex)) {
       if (isPath(graph, vertex, vertexB, visited)) {
         return true;

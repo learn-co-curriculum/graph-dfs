@@ -1,14 +1,13 @@
 require "set"
 
 def is_path(graph, vertex_a, vertex_b, visited = Set.new)
-  return true if graph[vertex_a].include?(vertex_b)
-
   visited.add(vertex_a)
   idx = 0
 
   while idx < graph[vertex_a].length
     vertex = graph[vertex_a][idx]
     idx += 1
+    return true if vertex == vertex_b
     next if visited.include?(vertex)
     return true if is_path(graph, vertex, vertex_b, visited)
   end
@@ -99,10 +98,10 @@ end
 # And a written explanation of your solution
 ###################################################################################################
  # I started by thinking of my base case, which is that the algorithm should return true if 
- # vertex B is in vertex A's adjacency list. I'm not checking for inclusion in the other direction
- # from B to A because this is a directed graph. Since it is possible for there to be loops in 
- # the graph, I need to also store a list of vertices that have been visited. This prevents me 
- # from creating a stack overflow. 
+ # vertex B is in vertex A's adjacency list, an O(n) operation. I'm not checking for inclusion in 
+ # the other direction from B to A because this is a directed graph. Since it is possible for there 
+ # to be loops in the graph, I need to also store a list of vertices that have been visited. This 
+ # prevents me from creating a stack overflow. 
  # 
  # I chose a Set instead of an Array because checking if a vertex
  # has been visited already would then have an O(1) lookup time, whereas an Array would be O(n). 
@@ -119,4 +118,10 @@ end
  # 
  # If all reachable vertices are visited and vertex B is not found, the algorithm will return
  # false once it exits the iteration in each frame.
+ #
+ # I could optimize this algorithm by not checking the adjacency list as the base case, and instead
+ # check if vertex A is vertex B. However, I'd have to make additional changes to my code to ensure
+ # that it does not return true for the following case: finding a path from vertex A back to itself.
+ # I ran out of time, but if I had more time I would do that. That would provide a time complexity of
+ # O(n).
 ###################################################################################################
