@@ -126,5 +126,6 @@ end
 # false once it exits the iteration in each frame.
 # 
 # The time complexity for the worst case occurs when we must visit every vertex and every
-# adjacency list. I think this can be boiled down to O(n) essentially.
+# adjacency list. I think this can be boiled down to O(n) essentially, but in reality it's
+# a combination of all the vertices and all of the edges, since they'd all be visited, O(V + E).
 #############################################################################################################
