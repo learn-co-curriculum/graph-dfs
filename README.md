@@ -2,21 +2,21 @@
 
 **Fork and then clone me!**
 
-![fork in the road](./fork_road.jpg)
+![fork in the road](https://curriculum-content.s3.amazonaws.com/data-structures-and-algorithms/graph-dfs/fork_road.jpg)
 
-For this challenge we'll be determining whether there is a path from vertex A to vertex B in a graph. We'll do this using depth-first traversal, which is typically a recursive process. During a depth-first traversal, we explore a path completely before going down another path. It's like exploring a fork in a road on foot: you walk all the way down one side of the fork, then walk back up to where you started, and then go down the other side before walking back up again. 
+For this challenge we'll be determining whether there is a path from vertex A to vertex B in a graph. We'll do this using depth-first traversal, which is typically a recursive process. During a depth-first traversal, we explore a path completely before going down another path. It's like exploring a fork in a road on foot: you walk all the way down one side of the fork, then walk back up to where you started, and then go down the other side before walking back up again.
 
 ## Our Graph
 
 For this challenge, we'll be using a directed disconnected graph stored in a hash/object where each key maps to an adjacency list. Let's break down that word jumble:
 
-* Directed graph: Starting at any vertex, we can travel in only one direction, e.g. we can go from vertex A to vertex B but not from B to A. This is similar to a Linked List. The difference, however, is that we can connect any two vertices we like, e.g. A -> B -> C -> A, and a vertex may be connected to many other vertices.
-* Disconnected: It is possible that certain vertices might be unreachable from another vertex. E.g. we can go from A to B, but there is no path from A to C.
-* Adjacency list: A list of vertices that share an edge with a given vertex, i.e. there is a direct connection from the given vertex to every vertex in the adjacency list.
+- Directed graph: Starting at any vertex, we can travel in only one direction, e.g. we can go from vertex A to vertex B but not from B to A. This is similar to a Linked List. The difference, however, is that we can connect any two vertices we like, e.g. A -> B -> C -> A, and a vertex may be connected to many other vertices.
+- Disconnected: It is possible that certain vertices might be unreachable from another vertex. E.g. we can go from A to B, but there is no path from A to C.
+- Adjacency list: A list of vertices that share an edge with a given vertex, i.e. there is a direct connection from the given vertex to every vertex in the adjacency list.
 
 Example:
 
-![friends graph](./graph.jpg)
+![friends graph](https://curriculum-content.s3.amazonaws.com/data-structures-and-algorithms/graph-dfs/graph.jpg)
 
 ```
 graph = {
